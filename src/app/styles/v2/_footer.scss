@@ -3,6 +3,10 @@ footer {
   padding: 50px;
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.50);
 
+    @media screen and (max-width: 485px) {
+      padding: 50px 20px;
+    }
+
 
 
   ul.nav {

@@ -11,7 +11,11 @@
 }
 
 .book-details {
+
   padding: 50px;
+  @media screen and (max-width: 485px) {
+    padding: 50px 20px;
+  }
 }
 
 .title {
