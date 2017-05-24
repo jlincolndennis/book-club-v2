@@ -11,6 +11,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       templateUrl: 'app/layout/main.html',
-      controller: 'MainCtrl'
+      controller: 'MainController',
+      controllerAs: 'vm'
     });
 }
