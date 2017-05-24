@@ -11,7 +11,7 @@
 const path = require('path');
 const gutil = require('gulp-util');
 
-exports.ngModule = 'app';
+exports.ngModule = 'bcApp';
 
 /**
  *  The main paths of your project handle these with care
@@ -58,6 +58,7 @@ exports.errorHandler = function (title) {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/\/bootstrap\.js$/, /\/bootstrap-sass\/.*\.js/, /\/bootstrap\.css/],
+  // exclude: [/\/bootstrap\.js$/, /\/bootstrap-sass\/.*\.js/, /\/bootstrap\.css/],
+  exclude: [],
   directory: 'bower_components'
 };

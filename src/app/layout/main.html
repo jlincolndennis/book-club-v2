@@ -1,3 +1,26 @@
-<h1>HELLO SWEETY</h1>
-<h2>{{71-2}} = nice</h2>
-<h3>{{vm.test}}</h3>
+<header>
+  <!-- <h1 class="masthead">Denver Illiterati</h1> -->
+  <img class="img-responsive logo" src="app/images/logo.png" alt="">
+  <p class="slogan">"A Social Book Club for Awesome People"</p>
+</header>
+
+<main ng-controller="MainController">
+  <bc-signup></bc-signup>
+  <bc-next-meeting meeting=vm.meeting></bc-next-meeting>
+  <bc-current-book book=vm.book></bc-current-book>
+  <bc-about></bc-about>
+</main>
+
+<footer class="text-center">
+
+  <ul class="footer-nav nav nav-pills">
+    <li><a href="https://tinyletter.com/denverilliterati" target="_blank">Sign Up</a></li>
+    <li><a href="http://tinyletter.com/denverilliterati/archive" target="_blank">Newsletter Archive</a></li>
+    <li><a href="https://docs.google.com/spreadsheets/d/1fxplLU4S0OPo4e3-eFCl7QVHS_CeOAGRuBH2AaHTVbU/edit">Book Archive</a></li>
+    <!-- <li><a href="">Admin</a></li> -->
+  </ul>
+
+
+  <p>Denver Illiterati &copy; 2014 - Forever</p>
+  <p>Site by <a href="http://jlincolndennis.com" target="=_blank">J Lincoln Dennis</a></p>
+</footer>

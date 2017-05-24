@@ -1,0 +1,35 @@
+.next-meeting {
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  div h2 {
+    margin-bottom: 0;
+  }
+}
+
+.meeting-info {
+  padding: 20px 20px;
+  line-height: 1.5;
+}
+
+.signup-btn {
+  border-radius: 0px;
+  background-color: $black;
+  color: white;
+  font-family: $headlineFont;
+  font-size: 2.25em;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  white-space: normal;
+
+
+  &:focus {
+    color: white;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $black;
+    transition: background 1s ease;
+  }
+}

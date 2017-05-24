@@ -1,0 +1,18 @@
+<div class="next-meeting text-center container">
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <h2>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Next Meeting <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      </h2>
+        <h2>{{meeting.date | amDateFormat:'dddd, MMMM Do YYYY'}}, {{meeting.time}}</h2>
+
+      <p class="meeting-info">{{meeting.message}}</p>
+
+      <p class="meeting-info">To learn the locations of our meetings, <a href="https://tinyletter.com/denverilliterati" target="_blank">sign up for our newsletter</a>!</p>
+
+      <button type="button" name="button" id="sign-up" data-toggle="modal" data-target="#signUp" class="btn signup-btn">Won't You Join Us?</button>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+footer {
+  background: $gray;
+  padding: 50px;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.50);
+
+
+
+  ul.nav {
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+
+  ul li {
+    padding-left: 40px;
+    padding-right: 40px;
+    a {
+      font-size: 1.25em;
+      font-family: $headlineFont;
+    }
+  }
+
+
+  p {
+    padding: 10px;
+  }
+}

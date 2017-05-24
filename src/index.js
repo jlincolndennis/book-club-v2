@@ -1,5 +1,5 @@
 angular
-  .module('app', [
+  .module('bcApp', [
     'ui.router',
     'ngSanitize',
     'angularMoment'

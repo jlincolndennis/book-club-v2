@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  angular.module('app')
-  .controller('MainController', function () {
+  angular.module('bcApp')
+  .controller('MainController', function (bookClubDataFactory) {
     const vm = this;
     vm.test = 'Tycho is the best';
 
-    // $scope.book = booksFactory.getCurrentBook();
-    // $scope.meeting = booksFactory.getNextMeeting();
+    vm.book = bookClubDataFactory.getCurrentBook();
+    vm.meeting = bookClubDataFactory.getNextMeeting();
   });
 })();

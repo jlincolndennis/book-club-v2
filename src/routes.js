@@ -1,5 +1,5 @@
 angular
-  .module('app')
+  .module('bcApp')
   .config(routesConfig);
 
 /** @ngInject */
