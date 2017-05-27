@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "denver-illiterati"
+    "default": "denver-illiterati",
+    "staging": "denver-illiterati"
   }
 }
