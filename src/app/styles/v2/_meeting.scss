@@ -1,15 +1,19 @@
 .next-meeting {
   margin-top: 50px;
   margin-bottom: 100px;
+}
 
-  div h2 {
+.next-meeting-date {
+    margin-top: 0;
     margin-bottom: 0;
-  }
+    font-size: 2em;
 }
 
 .meeting-info {
   padding: 20px 20px;
   line-height: 1.5;
+  margin-bottom: 0;
+
 }
 
 .signup-btn {

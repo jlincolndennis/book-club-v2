@@ -1,6 +1,8 @@
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 300px;
+  // padding-top: 50px;
+
 
   p {
     padding-left: 25px;
@@ -10,15 +12,20 @@
   .big-btn {
     margin-top: 75px;
   }
+}
+
+.about-headline-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
   .eye {
-    width: 5%;
-    text-align: center;
+    // width: 5%;
+    // text-align: center;
   }
 
   .eye-text {
-    display: inline-flex;
-    max-width: 70%;
-    padding-left: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
   }
-}
