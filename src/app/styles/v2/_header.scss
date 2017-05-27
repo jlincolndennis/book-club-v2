@@ -12,7 +12,7 @@ h1.masthead {
   align-items: flex-end;
   justify-content: center;
 
-  .logo {
+  .logo-wrapper {
     order: 2;
   }
   .denver {
@@ -25,15 +25,34 @@ h1.masthead {
   }
 }
 
+// @media all and (max-width: 635px) {
+//   .header-container {
+//     .logo-wrapper{
+//       min-width: 200px;
+//     }
+//
+//     .denver {
+//
+//       margin-bottom: 0px;
+//     }
+//     .illiterati {
+//
+//       margin-bottom: 0px;
+//     }
+//   }
+// }
+
 /* Small screens */
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   .header-container {
     flex-wrap: wrap;
     // flex-direction: column;
     // justify-content: space-around;
 
-    .logo {
+    .logo-wrapper {
       order: 1;
+      width: 100%;
+
     }
     .denver {
       font-size: 3em;
@@ -64,6 +83,8 @@ h1.masthead {
 
 img.logo {
   width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slogan {
