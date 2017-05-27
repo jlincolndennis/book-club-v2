@@ -25,61 +25,30 @@ h1.masthead {
   }
 }
 
-// @media all and (max-width: 635px) {
-//   .header-container {
-//     .logo-wrapper{
-//       min-width: 200px;
-//     }
-//
-//     .denver {
-//
-//       margin-bottom: 0px;
-//     }
-//     .illiterati {
-//
-//       margin-bottom: 0px;
-//     }
-//   }
-// }
-
-/* Small screens */
 @media all and (max-width: 600px) {
   .header-container {
     flex-wrap: wrap;
-    // flex-direction: column;
-    // justify-content: space-around;
 
     .logo-wrapper {
       order: 1;
       width: 100%;
-
     }
     .denver {
       font-size: 3em;
       order: 2;
       margin: 0;
-      // flex-grow: 1;
-      // min-width: 50%;
-      // text-align: center;
-      // margin-left: auto;
-      // margin-right: auto;
     }
+
     .illiterati {
       font-size: 3em;
       order: 3;
       margin: 0;
-      // flex-grow: 1;
-      // min-width: 50%;
-      // text-align: center;
-      // margin-left: auto;
-      // margin-right: auto;
     }
   }
   p.slogan {
     font-size: 1.25em;
   }
 }
-
 
 img.logo {
   width: 250px;
