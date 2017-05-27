@@ -58,14 +58,26 @@ img.logo {
 
 .slogan {
   font-family: $headlineFont;
-  padding: 5px;
+  // padding-bottom: 25px;
   font-size: 1.5em;
   font-weight: 300;
   text-align: center;
-  font-style: italic;
-  display: block;
+  // font-style: italic;
+  // display: block;
   margin-top: 15px;
-  border-top: 1px solid $gray;
-  border-bottom: 1px solid $gray;
-  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.50);
+  span {
+    padding: 5px 10px;
+    color: white;
+    background-color: $black;
+
+  }
+  // border-top: 1px solid $gray;
+  // border-bottom: 1px solid $gray;
+}
+
+header {
+  background: $gray;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.50);
+  padding-bottom: 25px;
+
 }
