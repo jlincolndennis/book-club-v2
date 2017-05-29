@@ -1,13 +1,13 @@
 <div class="next-meeting text-center container">
   <h2>
-    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Next Meeting <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{vm.meeting.type}} Meeting <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
   </h2>
 
   <div class="row">
     <div class="col-md-offset-2 col-md-8">
-        <h3 class="next-meeting-date">{{meeting.date | amDateFormat:'dddd, MMMM Do, YYYY'}} at {{meeting.time}}</h3>
+        <h3 class="next-meeting-date">{{meeting.date | amCalendar:referenceTime:formats}}</h3>
 
-      <p class="meeting-info">{{meeting.message}}</p>
+      <p class="meeting-info" ng-repeat="paragraph in meeting.message" >{{paragraph | removeHTMLTags}}</p>
 
       <p class="meeting-info">To learn the locations of our meetings, <a href="https://tinyletter.com/denverilliterati" target="_blank">sign up for our newsletter</a>!</p>
 

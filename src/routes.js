@@ -13,5 +13,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/layout/main.html',
       controller: 'MainController',
       controllerAs: 'vm'
+    })
+    .state('admin', {
+      url: '/admin',
+      templateUrl: 'app/admin/admin.html'
     });
 }

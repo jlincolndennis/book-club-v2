@@ -1,0 +1,74 @@
+<h2>{{vm.test}}</h2>
+<div class="container">
+
+<form name="bookClubForm" ng-submit="vm.formSubmit(bookClubForm)">
+  <h3>Meeting</h3>
+  <div class="form-group">
+    <label for="meetingDate">Date:</label>
+    <input
+      type="date"
+      class="form-control"
+      id="meetingDate"
+      ng-model="vm.nextMtg.date"
+      required>
+  </div>
+  <div class="form-group">
+    <label for="meetingTime">Time:</label>
+    <input
+      type="time"
+      class="form-control"
+      id="meetingTime"
+      ng-model="vm.nextMtg.time"
+      required>
+  </div>
+  <div class="form-group">
+    <label for="meetingMsg">Message: (Optional)</label>
+    <textarea
+      class="form-control"
+      id="meetingMsg"
+      ng-model="vm.nextMtg.msg"
+      rows="3"></textarea>
+  </div>
+
+  <!-- <h3>Book</h3>
+
+  <div class="form-group">
+    <label for="bookTitle">Title:</label>
+    <input type="text" class="form-control" id="bookTitle">
+  </div>
+  <div class="form-group">
+    <label for="bookAuthor">Author:</label>
+    <input type="text" class="form-control" id="bookAuthor">
+  </div>
+  <div class="form-group">
+    <label for="bookSynopsis">Synopsis:</label>
+    <textarea class="form-control" id="bookSynopsis"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="bookCoverUrl">Cover Image URL:</label>
+    <input type="url" class="form-control" id="bookCoverUrl">
+  </div>
+  <div class="form-group">
+    <label for="bookDplUrl">Link to Denver Public Library Listing:</label>
+    <input type="url" class="form-control" id="bookDplUrl">
+  </div>
+  <div class="form-group">
+    <label for="bookAmzUrl">Link to Amazon Product Listing:</label>
+    <input type="url" class="form-control" id="bookAmzUrl">
+  </div>
+  <div class="form-group">
+    <label for="bookChooser">Book Chooser:</label>
+    <input type="text" class="form-control" id="bookChooser">
+  </div>
+  <div class="form-group">
+    <label for="bookMonth">Month:</label>
+    <input type="month" class="form-control" id="bookMonth">
+  </div> -->
+
+  <input type="submit" class="btn btn-success" name="" value="SEND THAT SHIT">
+
+</form>
+
+<a ui-sref="app">HOME</a>
+
+</div>
