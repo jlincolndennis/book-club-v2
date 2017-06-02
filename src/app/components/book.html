@@ -16,7 +16,7 @@
     <div class="col-md-8 book-details">
       <h3 class="title">{{book.title}}</h3>
       <h4 class="author">by {{book.author}}</h4>
-      <p ng-repeat="paragraph in book.synopsis">{{paragraph}}</p>
+      <p ng-repeat="paragraph in book.synopsis">{{paragraph | removeHTMLTags}}</p>
       <p class="archive-link text-right"><a href="https://docs.google.com/spreadsheets/d/1fxplLU4S0OPo4e3-eFCl7QVHS_CeOAGRuBH2AaHTVbU/edit" target="_blank">View Book Selection History...</a></p>
     </div>
 

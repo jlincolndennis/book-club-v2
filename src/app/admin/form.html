@@ -1,4 +1,3 @@
-<h2>{{vm.test}}</h2>
 <div class="container">
 
 <form name="bookClubForm" ng-submit="vm.formSubmit(bookClubForm)">
@@ -30,40 +29,77 @@
       rows="3"></textarea>
   </div>
 
-  <!-- <h3>Book</h3>
+  <h3>Book</h3>
 
   <div class="form-group">
     <label for="bookTitle">Title:</label>
-    <input type="text" class="form-control" id="bookTitle">
+    <input
+      type="text"
+      class="form-control"
+      id="bookTitle"
+      ng-model="vm.nextBook.title"
+      required>
   </div>
   <div class="form-group">
     <label for="bookAuthor">Author:</label>
-    <input type="text" class="form-control" id="bookAuthor">
+    <input
+      type="text"
+      class="form-control"
+      id="bookAuthor"
+      ng-model="vm.nextBook.author"
+      required>
   </div>
   <div class="form-group">
     <label for="bookSynopsis">Synopsis:</label>
-    <textarea class="form-control" id="bookSynopsis"></textarea>
+    <textarea
+      class="form-control"
+      id="bookSynopsis"
+      ng-model="vm.nextBook.synopsis"
+      required></textarea>
   </div>
   <div class="form-group">
     <label for="bookCoverUrl">Cover Image URL:</label>
-    <input type="url" class="form-control" id="bookCoverUrl">
+    <input
+      type="url"
+      class="form-control"
+      id="bookCoverUrl"
+      ng-model="vm.nextBook.imgUrl"
+      required>
   </div>
   <div class="form-group">
     <label for="bookDplUrl">Link to Denver Public Library Listing:</label>
-    <input type="url" class="form-control" id="bookDplUrl">
+    <input
+      type="url"
+      class="form-control"
+      id="bookDplUrl"
+      ng-model="vm.nextBook.dplUrl">
   </div>
   <div class="form-group">
     <label for="bookAmzUrl">Link to Amazon Product Listing:</label>
-    <input type="url" class="form-control" id="bookAmzUrl">
+    <input
+      type="url"
+      class="form-control"
+      id="bookAmzUrl"
+      ng-model="vm.nextBook.amzUrl">
   </div>
   <div class="form-group">
     <label for="bookChooser">Book Chooser:</label>
-    <input type="text" class="form-control" id="bookChooser">
+    <input
+      type="text"
+      class="form-control"
+      id="bookChooser"
+      ng-model="vm.nextBook.chosenBy"
+      required>
   </div>
   <div class="form-group">
     <label for="bookMonth">Month:</label>
-    <input type="month" class="form-control" id="bookMonth">
-  </div> -->
+    <select
+      class="form-control"
+      id="bookMonth"
+      ng-model="vm.nextBook.month"
+      ng-options="month for month in vm.months">
+    </select>
+  </div>
 
   <input type="submit" class="btn btn-success" name="" value="SEND THAT SHIT">
 

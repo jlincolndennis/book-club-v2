@@ -24,11 +24,20 @@
       date: getMonday(),
       time: new Date(2017, 0, 1, 19, 0, 0)
     };
+    vm.nextBook = {};
+    vm.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    const today = new Date();
+    const thisMonth = today.getMonth();
+    const thisYear = today.getFullYear();
+    vm.nextBook.month = vm.months[thisMonth];
 
     vm.setMeetingData = bookClubDataFactory.setNextMeeting;
 
     function formSubmit(form) {
       const meeting = {};
+      const book = angular.copy(vm.nextBook);
+      book.year = thisYear;
       const dateTime = new Date(
         vm.nextMtg.date.getFullYear(),
         vm.nextMtg.date.getMonth(),
@@ -37,18 +46,26 @@
         vm.nextMtg.time.getMinutes(),
         vm.nextMtg.time.getSeconds()
       );
-
       meeting.date = dateTime;
-      let msg = vm.nextMtg.msg.split('\n');
-      msg = msg.filter(entry => /\S/.test(entry));
-      // msg.forEach(string => {
-      //   string = string.replace(/ +/g, ' ');
-      // });
 
-      meeting.message = msg;
+      if (vm.nextMtg.msg) {
+        let msg = vm.nextMtg.msg.split('\n');
+        // Removes empty strings from array
+        msg = msg.filter(entry => /\S/.test(entry));
+
+        meeting.message = msg;
+      }
+
+      let syn = vm.nextBook.synopsis.split('\n');
+      // Removes empty strings from array
+      syn = syn.filter(entry => /\S/.test(entry));
+
+      book.synopsis = syn;
       $log.log(meeting);
+      $log.log(book);
 
-      bookClubDataFactory.setNextMeeting(meeting);
+      bookClubDataFactory.setMeeting(meeting);
+      bookClubDataFactory.setBook(book);
     }
 
     function getMonday() {

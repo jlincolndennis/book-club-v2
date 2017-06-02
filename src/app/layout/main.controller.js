@@ -6,7 +6,7 @@
     const vm = this;
     vm.test = 'Tycho is the best';
 
-    vm.book = bookClubDataFactory.getCurrentBook();
-    vm.meeting = bookClubDataFactory.getNextMeeting();
+    vm.book = bookClubDataFactory.getBook();
+    vm.meeting = bookClubDataFactory.getMeeting();
   });
 })();
