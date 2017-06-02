@@ -1,6 +1,6 @@
 <div class="container">
 
-<form name="bookClubForm" ng-submit="vm.formSubmit(bookClubForm)">
+<form name="bookClubForm" ng-submit="vm.formSubmit(bookClubForm)" novalidate>
   <h3>Meeting</h3>
   <div class="form-group">
     <label for="meetingDate">Date:</label>
@@ -31,66 +31,110 @@
 
   <h3>Book</h3>
 
-  <div class="form-group">
-    <label for="bookTitle">Title:</label>
+  <div
+  class="form-group"
+  ng-class="{'has-error': bookClubForm.title.$invalid && bookClubForm.title.$touched, 'has-success': bookClubForm.title.$valid}">
+    <label class="control-label" for="bookTitle">Title:</label>
     <input
       type="text"
       class="form-control"
       id="bookTitle"
       ng-model="vm.nextBook.title"
+      name="title"
       required>
+    <div ng-messages="bookClubForm.title.$error" ng-if="bookClubForm.title.$touched">
+      <p ng-message="required" class="control-label">No title? Really?</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="bookAuthor">Author:</label>
+
+  <div class="form-group"
+    ng-class="{'has-error': bookClubForm.author.$invalid && bookClubForm.author.$touched, 'has-success': bookClubForm.author.$valid}">
+    <label class="control-label" for="bookAuthor">Author:</label>
     <input
       type="text"
       class="form-control"
       id="bookAuthor"
       ng-model="vm.nextBook.author"
+      name="author"
       required>
+    <div ng-messages="bookClubForm.author.$error" ng-if="bookClubForm.author.$touched">
+      <p ng-message="required" class="control-label">No Author? You sure?</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="bookSynopsis">Synopsis:</label>
+
+  <div class="form-group"
+    ng-class="{'has-error': bookClubForm.synopsis.$invalid && bookClubForm.synopsis.$touched, 'has-success': bookClubForm.synopsis.$valid}">
+    <label class="control-label" for="bookSynopsis">Synopsis:</label>
     <textarea
       class="form-control"
       id="bookSynopsis"
       ng-model="vm.nextBook.synopsis"
-      required></textarea>
+      required
+      name="synopsis"></textarea>
+    <div ng-messages="bookClubForm.synopsis.$error" ng-if="bookClubForm.synopsis.$touched">
+      <p ng-message="required" class="control-label">No Synopsis? Just paste it from Amazon, dude.</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="bookCoverUrl">Cover Image URL:</label>
+
+  <div class="form-group"
+  ng-class="{'has-error': bookClubForm.cover.$invalid && bookClubForm.cover.$touched, 'has-success': bookClubForm.cover.$valid}">
+    <label class="control-label" for="bookCoverUrl">Cover Image URL:</label>
     <input
       type="url"
       class="form-control"
       id="bookCoverUrl"
       ng-model="vm.nextBook.imgUrl"
+      name="cover"
       required>
+    <div ng-messages="bookClubForm.cover.$error" ng-if="bookClubForm.cover.$touched">
+      <p ng-message="required" class="control-label">No Cover? But how will we judge the book?</p>
+      <p ng-message="url" class="control-label">Hey! That's not a URL! What are you trying to pull here?</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="bookDplUrl">Link to Denver Public Library Listing:</label>
+
+  <div class="form-group"
+    ng-class="{'has-error': bookClubForm.library.$invalid && bookClubForm.library.$touched, 'has-success': bookClubForm.library.$valid && vm.nextBook.dplUrl}">
+    <label class="control-label" for="bookDplUrl">Link to Denver Public Library Listing (Optional):</label>
     <input
       type="url"
       class="form-control"
       id="bookDplUrl"
-      ng-model="vm.nextBook.dplUrl">
+      ng-model="vm.nextBook.dplUrl"
+      name="library">
+      <div ng-messages="bookClubForm.library.$error" ng-if="bookClubForm.library.$touched">
+        <p ng-message="url" class="control-label">Invalid URL! Just because its optional doesn't mean you don't have to do it correctly!</p>
+      </div>
   </div>
-  <div class="form-group">
-    <label for="bookAmzUrl">Link to Amazon Product Listing:</label>
+
+  <div class="form-group"
+    ng-class="{'has-error': bookClubForm.amazon.$invalid && bookClubForm.amazon.$touched, 'has-success': bookClubForm.amazon.$valid && vm.nextBook.amzUrl}">
+    <label class="control-label" for="bookAmzUrl">Link to Amazon Product Listing: (Optional)</label>
     <input
       type="url"
       class="form-control"
       id="bookAmzUrl"
-      ng-model="vm.nextBook.amzUrl">
+      ng-model="vm.nextBook.amzUrl"
+      name="amazon">
+    <div ng-messages="bookClubForm.amazon.$error" ng-if="bookClubForm.amazon.$touched">
+      <p ng-message="url" class="control-label">Invalid URL! I feel like you should know this by now...</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="bookChooser">Book Chooser:</label>
+
+  <div class="form-group"
+    ng-class="{'has-error': bookClubForm.chooser.$invalid && bookClubForm.chooser.$touched, 'has-success': bookClubForm.chooser.$valid}">
+    <label class="control-label" for="bookChooser">Book Chooser:</label>
     <input
       type="text"
       class="form-control"
       id="bookChooser"
       ng-model="vm.nextBook.chosenBy"
+      name="chooser"
       required>
+    <div ng-messages="bookClubForm.chooser.$error" ng-if="bookClubForm.chooser.$touched">
+      <p ng-message="required" class="control-label">No Book Chooser? But who will we blame?</p>
+    </div>
   </div>
+
   <div class="form-group">
     <label for="bookMonth">Month:</label>
     <select
@@ -101,10 +145,10 @@
     </select>
   </div>
 
-  <input type="submit" class="btn btn-success" name="" value="SEND THAT SHIT">
+  <input type="submit" class="btn btn-success" name="" value="Update The Dang Website!">
 
 </form>
 
-<a ui-sref="app">HOME</a>
+<a ui-sref="app">Return Home</a>
 
 </div>

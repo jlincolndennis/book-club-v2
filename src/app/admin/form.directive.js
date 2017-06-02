@@ -14,9 +14,9 @@
     };
   }
 
-  formController.$inject = ['$log', 'bookClubDataFactory'];
+  formController.$inject = ['$log', 'bookClubDataFactory', '$state'];
 
-  function formController($log, bookClubDataFactory) {
+  function formController($log, bookClubDataFactory, $state) {
     const vm = this;
     vm.test = 'Tycho is still the best';
     vm.formSubmit = formSubmit;
@@ -35,6 +35,7 @@
     vm.setMeetingData = bookClubDataFactory.setNextMeeting;
 
     function formSubmit(form) {
+      $log.log(form);
       const meeting = {};
       const book = angular.copy(vm.nextBook);
       book.year = thisYear;
@@ -66,6 +67,13 @@
 
       bookClubDataFactory.setMeeting(meeting);
       bookClubDataFactory.setBook(book);
+
+      form.$setPristine();
+      form.$setUntouched();
+      vm.nextBook = {};
+      vm.nextMtg = {};
+
+      $state.go('app');
     }
 
     function getMonday() {

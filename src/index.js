@@ -2,7 +2,8 @@ angular
 .module('bcApp', [
   'ui.router',
   'ngSanitize',
-  'angularMoment'
+  'angularMoment',
+  'ngMessages'
 ])
 .run(moment => {
   moment.updateLocale('en', {
