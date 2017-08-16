@@ -8,19 +8,19 @@
 
   function bookClubDataFactory() {
     const _currentBook = {
-      title: 'Lonesome Lies Before Us',
-      author: 'Don Lee',
-      synopsis: 'Yadin Park is a talented alt-country musician whose career has floundered―doomed first by his homely looks and lack of stage presence and then by a progressive hearing disorder. His girlfriend, Jeanette Matsuda, might have been a professional photographer but for a devastating heartbreak in her teens. Now Yadin works for Jeanette\'s father\'s carpet-laying company in California while Jeanette cleans rooms at a local resort. When Yadin\'s former lover and musical partner, the celebrated Mallory Wicks, comes back into his life, all their most private hopes and desires are exposed, their secret fantasies about love and success put to the test. Drawn to the music of indie singer-songwriters like Will Johnson, who helped shape the lyrics in this book, Don Lee has written a novel that unforgettably captures America’s deepest yearnings. Beautifully sad and laced with dark humor, Lonesome Lies Before Us is a profound, heartfelt romance, a soulful and memorable song.',
-      imgUrl: 'app/images/lonesome-lies.jpg',
-      dplUrl: 'http://www.worldcat.org/title/lonesome-lies-before-us-a-novel/oclc/959885744&referer=brief_results',
-      amzUrl: 'https://www.amazon.com/Lonesome-Lies-Before-Us-Novel/dp/0393608816/ref=sr_1_1?ie=UTF8&qid=1500044641&sr=8-1&keywords=lonesome+lies+before+us',
-      month: 'July',
+      title: 'Flatland: A Romance of Many Dimensions',
+      author: 'Edwin A. Abbott',
+      synopsis: 'This masterpiece of science (and mathematical) fiction is a delightfully unique and highly entertaining satire that has charmed readers for more than 100 years. The work of English clergyman, educator and Shakespearean scholar Edwin A. Abbott (1838-1926), it describes the journeys of A. Square, a mathematician and resident of the two-dimensional Flatland, where women-thin, straight lines-are the lowliest of shapes, and where men may have any number of sides, depending on their social status.  Through strange occurrences that bring him into contact with a host of geometric forms, Square has adventures in Spaceland (three dimensions), Lineland (one dimension) and Pointland (no dimensions) and ultimately entertains thoughts of visiting a land of four dimensions—a revolutionary idea for which he is returned to his two-dimensional world. Charmingly illustrated by the author, Flatland is not only fascinating reading, it is still a first-rate fictional introduction to the concept of the multiple dimensions of space.',
+      imgUrl: 'app/images/flatland.jpg',
+      dplUrl: 'http://www.worldcat.org/title/flatland-a-romance-of-many-dimensions/oclc/280319',
+      amzUrl: 'https://www.amazon.com/Flatland-Romance-Dimensions-Thrift-Editions/dp/048627263X/ref=sr_1_1?ie=UTF8&qid=1502905228&sr=8-1&keywords=flatland',
+      month: 'August',
       year: 2017,
-      choosenBy: 'Keith'
+      choosenBy: 'Marley'
     };
 
     const _nextMeeting = {
-      date: new Date(2017, 7, 14),
+      date: new Date(2017, 8, 11),
       time: '7:00pm',
       message: 'If you\'ve never been to a meeting, even if you haven\'t read the book, you are still more than welcome - nay, encouraged! - to attend.  Come meet everyone, assess the general vibe, etc. Also, it is the quickest way to find out the next book we\'ll be reading ....since sometimes it takes me a few days to remember to send out an email to the group at large.'
     };
